@@ -21,7 +21,7 @@ namespace SmartAdvisor
             public string name { get; set; }
             public string alpha_two_code { get; set; }
 
-            //Had to seprately define this property because json string contains '-' in node name state-province. Hence while Deserializing the raw json it will return always null even though a value is present
+            //Had to seprately define this property because json string contains '-' in node name state-province.  Hence while Deserializing the raw json it will return always null even though a value is present
             [JsonProperty(PropertyName = "state-province")]
             public string stateprovince { get; set; }
             public List<string> domains { get; set; }
